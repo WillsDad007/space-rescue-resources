@@ -1,6 +1,6 @@
 # Rooms Folder
 
-Rooms are stages or levels in the game. 
+Rooms are stages or levels in the game.
 
 In the Rooms folder you put each level-stage-room of your game. 
 
