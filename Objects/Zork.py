@@ -23,7 +23,6 @@ class Zork(RoomObject):
         """
         Keeps the Zork inside the top and bottom room limits
         """
-        print("hit")
         if self.y < 0 or self.y > Globals.SCREEN_HEIGHT - self.height:
             self.y_speed *= -1
 
