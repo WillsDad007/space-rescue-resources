@@ -10,7 +10,7 @@ class Asteroid(RoomObject):
         Initialise the asteroid object
         """
         # include attributes and methods from RoomObject
-        RoomObject.__init__(self, room, x, y)
+        RoomObject.__init__(self,room, x, y)
 
         # set image
         image = self.load_image("asteroid.png")
@@ -48,9 +48,14 @@ class Asteroid(RoomObject):
         if self.x + self.width < 0:
             self.room.delete_object(self)
 
-    def handle_collosion(self, other, other_type):
+    def handle_collision(self, other, other_type):
         """
         Handles the collision events for the Asteroid
         """
         if other_type == "Ship":
-            self.room.running = False
+            self.room.delete_object(self)
+            Globals.LIVES -= 1
+            if Globals.LIVES > 0:
+                self.room.lives.update_image()
+            else:
+                self.room.running = False
