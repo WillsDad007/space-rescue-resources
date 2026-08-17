@@ -1,4 +1,5 @@
 from GameFrame import RoomObject
+import pygame
 
 class Astronaut(RoomObject):
     """

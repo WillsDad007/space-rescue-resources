@@ -22,11 +22,11 @@ class Zork(RoomObject):
         self.y_speed = random.choice([-10,10])
 
         # start asteroid timer
-        asteroid_spawn_time = random.randint(15,150)
+        asteroid_spawn_time = random.randint(15, 150)
         self.set_timer(asteroid_spawn_time, self.spawn_asteroid)
 
         # start astronaut timer
-        astronaut_spawn_time = random.randint(30, 200)
+        astronaut_spawn_time = random.randint(150, 300)
         self.set_timer(astronaut_spawn_time, self.spawn_astronaut)
 
     def keep_in_room(self):
@@ -58,9 +58,12 @@ class Zork(RoomObject):
         """
         Randomly spawns a new astronaut
         """
-        # spawn astronaut and add to room
-        new_astronaut = Astronaut(self.room, self.x, self.y + self.height/2)
-        self.room.add_room_object(new_astronaut)
+        # check if 50 astronauts have been spawned yet
+        if Globals.ASTRONAUTS_SPAWNED <= 49:
+            # spawn astronaut and add to room
+            new_astronaut = Astronaut(self.room, self.x, self.y + self.height/2)
+            self.room.add_room_object(new_astronaut)
+            Globals.ASTRONAUTS_SPAWNED += 1
 
         # reset timer for next astronaut spawn
         astronaut_spawn_time = random.randint(30, 200)

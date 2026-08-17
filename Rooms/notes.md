@@ -1,3 +1,18 @@
+# Overall Stuff
+
+Goal of rescuing 50 astronauts 
+
+Display Goal (DONE)
+
+Reduce spawn rate of Asteroids
+
+Only spawn 50 astronauts (DONE)
+
+Display Goal Progress
+
+Add Sophie to the game
+
+
 # Rooms Folder
 
 Rooms are stages or levels in the game.

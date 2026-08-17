@@ -9,6 +9,10 @@ class Globals:
 
     SCORE = 0
 
+    ASTRONAUTS_SPAWNED = 0
+
+    GOALTEXT = "50 Astronauts will be deployed, the more you save, the higher your overall score."
+
     # - Set the starting number of lives - #
     LIVES = 3
 

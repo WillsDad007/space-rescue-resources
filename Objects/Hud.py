@@ -26,6 +26,26 @@ class Score(TextObject):
         self.text = str(Globals.SCORE)
         self.update_text()
 
+class GoalText(TextObject):
+    def __init__(self, room, x: int, y: int, text=None):
+        TextObject.__init__(self, room, x, y, text)
+
+        # set values
+        self.size = 20
+        self.font = 'Arial Black'
+        self.colour = (255,255,255)
+        self.bold = False
+        self.update_text()
+
+    # def update_goal(self, change):
+    #     """
+    #     Updates the goal and redraws the text
+    #     """
+    #     Globals.SCORE += change
+    #     self.text = str(Globals.SCORE)
+    #     self.update_text()
+        
+
 class Lives(RoomObject):
     """
     A class for displaying the number of lives remaining
