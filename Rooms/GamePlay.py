@@ -29,7 +29,7 @@ class GamePlay(Level):
 
         # load sound files
         self.shoot_laser = self.load_sound("Laser_shot.ogg")
-        self.asteroid_shot = self.load_sound("Asteroid_shot.wav")
+        self.asteroid_shot = self.load_sound("loud-explosion.mp3")
         self.astronaut_saved = self.load_sound("michael-jackson-hee-hee.mp3")
         self.asteroid_collision = self.load_sound("Ship_damage.ogg")
-        self.astronaut_shot = self.load_sound("Astronaut_hit.ogg")
+        self.astronaut_shot = self.load_sound("emoji-scream.mp3")
